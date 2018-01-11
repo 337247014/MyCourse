@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>My Course</h3>
+
+  <ion-grid>
+    <ion-row >
+      <ion-col col-md-6 *ngFor="let item of imageList">
+        <div style="height:30vh;">
+            <video [src]="item.url"  controls="controls" style="margin: 0 auto;height: 100%;width:100%;"></video>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
